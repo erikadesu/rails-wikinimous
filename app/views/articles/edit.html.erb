@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Edit ::<%= @article.title %>:: </h1>
+  <%= form_for @article do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <div class="col-md-8">
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :content %>
+    <div class="col-md-8">
+      <%= f.text_field :content, class: "form-control" %>
+    </div>
+  </div>
+  <%= f.submit :submit, class: 'btn btn-primary' %>
+  <% end %>
+</div>
+<br>
+<button type="button" class="btn btn-outline-primary">
+  <%= link_to 'Back to Articles', articles_path %></button>
