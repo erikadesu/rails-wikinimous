@@ -11,7 +11,7 @@ puts 'Creating 100 fake posts...'
 100.times do
   article = Article.new(
     title: Faker::ChuckNorris.fact,
-    content: Faker::TheFreshPrinceOfBelAir.quote,
+    content: Faker::Lebowski.quote,
   )
   article.save!
 end

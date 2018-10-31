@@ -21,12 +21,12 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    article.update(task_params)
-    redirect_to article_path(article.id)
+    @article.update(article_params)
+    redirect_to article_path(@article.id)
   end
 
   def destroy
-    article.destroy
+    @article.destroy
     redirect_to root_path
   end
 
